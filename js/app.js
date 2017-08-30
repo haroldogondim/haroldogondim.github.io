@@ -22,8 +22,8 @@ var app = function() {
           scrollTop: $("#submit-message").offset().top - 50
         }, 1000);
       } else {
+        sendingForm = true;
         $.ajax({
-          sendingForm = true;
           type: "POST",
           dataType: "json",
           url: "https://formspree.io/haroldogondim@hotmail.com",
