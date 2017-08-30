@@ -17,7 +17,7 @@ var app = function() {
     
       
       if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '') {
-        $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Você precisa preencher todos os campos. ;)</div></article>");
+        $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Você precisa preencher todos os campos.</div></article>");
         $("html, body").animate({
           scrollTop: $("#submit-message").offset().top - 50
         }, 1000);
