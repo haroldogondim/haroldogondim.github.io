@@ -18,7 +18,7 @@ var app = function() {
       sendingForm = true;
       $.ajax({
         type: "POST",
-        dataType: "json"
+        dataType: "json",
         url: "https://formspree.io/haroldogondim@hotmail.com",
         beforeSend: function() { 
           $("#submit").val("Enviando").attr("disabled", "disabled"); 
