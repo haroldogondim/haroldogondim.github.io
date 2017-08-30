@@ -16,6 +16,7 @@ var app = function() {
       if(sendingForm) return false;
     
       sendingForm = true;
+      if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '')
       $.ajax({
         type: "POST",
         dataType: "json",
