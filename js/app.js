@@ -31,7 +31,7 @@ var app = function() {
           "_subject": "Novo email pelo site!"
         }
       }).done(function(message) {
-      $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">"+message+"</div></article>");
+      $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Oi. Eu recebi sua mensagem e em breve respondo, ok? :)</div></article>");
       $("html, body").animate({
         scrollTop: $("#submit-message").offset().top - 50
       }, 1000);
