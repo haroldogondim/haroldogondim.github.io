@@ -13,10 +13,24 @@ var app = function() {
   var sendingForm = false;
   
   $("#form-contact").submit(function() {
-    if(sendingForm)
-      return false;
-    sendingForm = true;
-    $.ajax({beforeSend: function() { $("#submit").val("Enviando").attr("disabled", "disabled"); }, type: "POST", url: "lib/contact.php", data: {"nome": $("#input-name").val(), "telefone": $("#input-phone").val(), "email": $("#input-email").val(), "mensagem": $("#input-message").val()}}).done(function(message) {
+      if(sendingForm) return false;
+    
+      sendingForm = true;
+      $.ajax({
+        type: "POST",
+        dataType: "json"
+        url: "https://formspree.io/haroldogondim@hotmail.com",
+        beforeSend: function() { 
+          $("#submit").val("Enviando").attr("disabled", "disabled"); 
+        },
+        data: {
+          "nome": $("#input-name").val(), 
+          "telefone": $("#input-phone").val(), 
+          "email": $("#input-email").val(), 
+          "mensagem": $("#input-message").val(),
+          "_subject": "Novo email pelo site!"
+        }
+      }).done(function(message) {
       $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">"+message+"</div></article>");
       $("html, body").animate({
         scrollTop: $("#submit-message").offset().top - 50
