@@ -221,25 +221,43 @@
         <h2 class="subtitle">Faça sua pergunta, tire sua dúvida ou deixe sua sugestão. ;)</h2>
         <div class="control is-vertical">
           <form action="javascript:;" method="post" id="form-contact">
-            <label class="label">Nome</label>
-            <p class="control has-icon">
-              <input class="input" type="text" id="input-name">
-              <i class="fa fa-user-o"></i>
-            </p>
-            <label class="label">Telefone</label>
-            <p class="control has-icon">
-              <input class="input" type="text" id="input-phone">
-              <i class="fa fa-phone"></i>
-            </p>
-            <label class="label">Email</label>
-            <p class="control has-icon">
-              <input class="input" type="email" id="input-email">
-              <i class="fa fa-envelope"></i>
-            </p>
-            <label class="label">Mensagem</label>
-            <p class="control">
-              <textarea class="textarea" id="input-message" placeholder="Deixe sua mensagem aqui..."></textarea>
-            </p>
+          
+            <div class="field">
+              <label class="label">Nome</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" id="input-name">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user-o"></i>
+                </span>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Telefone</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" id="input-phone">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user-o"></i>
+                </span>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" id="input-email">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user-o"></i>
+                </span>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea id="input-message" class="textarea" placeholder="Deixe sua mensagem aqui..."></textarea>
+              </div>
+            </div>
             <p class="control">
               <input type="submit" id="submit" value="Enviar" class="button is-primary">
             </p>
