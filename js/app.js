@@ -10,11 +10,15 @@ var app = function() {
   $("figure.image").backgroundDraggable({axis: 'y' });
   $("#input-phone").mask("(99) 99999-9999", {placeholder: " "});
   
+  function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
+  
   var sendingForm = false;
   
-  $("#form-contact").submit(function() {
+  /*$("#form-contact").submit(function() {
       if(sendingForm) return false;
-    
       
       if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '') {
         $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Você precisa preencher todos os campos.</div></article>");
@@ -48,6 +52,26 @@ var app = function() {
       }).error(function(e) {
         alert(e.responseText);
       });
+    }
+  });*/
+  
+  $("#form-contact").submit(function() {
+    if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '') {
+      $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Você precisa preencher todos os campos.</div></article>");
+      $("html, body").animate({
+        scrollTop: $("#submit-message").offset().top - 50
+      }, 1000);
+      
+      return false;
+    } else {
+      if(!validateEmail($("#input-email").val())) {
+        $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Digite um e-mail válido.</div></article>");
+        $("html, body").animate({
+          scrollTop: $("#submit-message").offset().top - 50
+        }, 1000);
+        
+        return false;
+      }
     }
   });
   
