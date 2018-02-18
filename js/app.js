@@ -53,7 +53,7 @@ var app = function() {
         alert(e.responseText);
       });
     }
-  });*/
+  });*/ 
   
   $("#form-contact").submit(function() {
     if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '') {
