@@ -17,44 +17,6 @@ var app = function() {
   
   var sendingForm = false;
   
-  /*$("#form-contact").submit(function() {
-      if(sendingForm) return false;
-      
-      if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '') {
-        $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Você precisa preencher todos os campos.</div></article>");
-        $("html, body").animate({
-          scrollTop: $("#submit-message").offset().top - 50
-        }, 1000);
-      } else {
-        sendingForm = true;
-        $.ajax({
-          type: "POST",
-          dataType: "json",
-          url: "https://formspree.io/haroldogondim@hotmail.com",
-          beforeSend: function() { 
-            $("#submit").val("Enviando").attr("disabled", "disabled"); 
-          },
-          data: {
-            "nome": $("#input-name").val(), 
-            "telefone": $("#input-phone").val(), 
-            "email": $("#input-email").val(), 
-            "mensagem": $("#input-message").val(),
-            "_subject": "Novo contato pelo site!"
-          }
-        }).done(function(message) {
-        $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Eu recebi sua mensagem e em breve respondo, ok? :)</div></article>");
-        $("html, body").animate({
-          scrollTop: $("#submit-message").offset().top - 50
-        }, 1000);
-        $("#submit-message").effect("pulsate", {times: 3}, 1000);
-        sendingForm = false;
-        $("#submit").val("Enviar").removeAttr("disabled");
-      }).error(function(e) {
-        alert(e.responseText);
-      });
-    }
-  });*/ 
-  
   $("#form-contact").submit(function() {
     if($.trim($("#input-name").val()) == '' || $.trim($("#input-phone").val()) == '' || $.trim($("#input-email").val()) == '' || $.trim($("#input-message").val()) == '') {
       $("#submit-message").html("<article class=\"message is-info\"><div class=\"message-body\">Você precisa preencher todos os campos.</div></article>");
