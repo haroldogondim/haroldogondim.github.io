@@ -1,3 +1,3 @@
-## Personal Website
+## haroldogondim.github.io
 
-Just some files of [my portfolio](http://haroldogondim.github.io).
+My [portfolio](http://haroldogondim.github.io).
