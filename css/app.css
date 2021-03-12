@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  /*-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;*/
+  font-family: 'Lato', 'Roboto Mono', monospace, sans-serif;
+  color: #2F2F2F;
+}
+
+a, a:hover, a:visited {
+  color: #2F2F2F;
+}
+
+ul, ul li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  margin-top: 15px;
+}
+
+#header .name {
+  font-size: 50px;
+  padding: 15px 0 5px;
+}
+
+#header .row[data-el="icons"] i {
+  font-size: 22px;
+  margin: 0 3px 0 3px;
+}
+
+#header .icon-social {
+  max-width: 30px;
+  margin: 0px 5px;
+}
+
+#header .avatar {
+  width: 100px; 
+  height: 100px;
+}
+
+#header .avatar img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 100px !important;
+}
+
+@media (max-width: 480px) {
+  #header .name {
+    text-align: center;
+  }
+}
+
+#header .row[data-el="icons"] {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+#content {
+  position: relative;
+  top: 20px;
+}
+
+.section {
+  margin: 20px 0 20px;
+}
+
+.section .title {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.section .title i {
+  position: relative;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+#skills .col-6.less {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#skills ul {
+  display: flex;
+}
+
+#skills ul li {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+#skills li {
+  text-align: right;
+  padding: 2px 5px;
+}
+
+@media (min-width: 768px) {
+  #skills li:nth-child(even) {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills li {
+    text-align: center;
+  }
+
+  #skills ul li {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.experience ul {
+  width: 100%;
+  display: block;
+}
+
+.experience .exp {
+  margin: 0px 0 30px;
+}
+
+.experience .exp:last-child {
+  margin-bottom: 0px;
+}
+
+.experience .exp h2 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.experience .exp .role {
+  width: 100%;
+  height: auto;
+  margin: 5px 0;
+  color: rgba(34, 34, 34, 0.8);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.experience .exp .full {
+  font-size: 15px;
+  height: auto;
+  margin: 5px 0;
+}
+
+.experience .exp i:not(.fas) {
+  font-style: italic;
+}
+
+.experience .exp .info {
+  color:rgba(83, 23, 23, 0.9);
+  font-weight: 500;
+  font-size: 14px;
+  font-style: italic;
+}
+
+#footer {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px 0 20px;
+  background: #2F2F2F;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
