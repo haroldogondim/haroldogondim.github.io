@@ -24,6 +24,7 @@ body {
 
 a, a:hover, a:visited {
   color: #2F2F2F;
+  font-weight: 600;
 }
 
 ul, ul li {
@@ -148,6 +149,11 @@ ul, ul li {
   width: 100%;
   font-size: 18px;
   font-weight: 500;
+}
+
+.experience .exp h2.current a {
+  color: #333364;
+  font-size: 20px !important;
 }
 
 .experience .exp .role {
